@@ -16,6 +16,7 @@ conf = json.load(openjson)
 cookie = "cookiesearcher.txt"
 
 snipedIds = []
+creatorID = None # put id of creator here
 
 cookies = [[i, ""] for i in conf["cookie"]]
 if type(conf["cookie"]) == str:
@@ -68,7 +69,7 @@ async def main():
         try:
             ids = await latest()
             for id in ids:
-                if id == 13341250:
+                if id == creatorID:
                     betterPrint(f"[aquamarine1]NEW LIM ADDED {id}")
                     with open("limiteds.txt", "a") as f:
                         f.truncate(0)
