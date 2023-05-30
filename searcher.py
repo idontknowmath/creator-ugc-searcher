@@ -11,9 +11,7 @@ import traceback
 import logging
 
 
-openjson = open('config.json') 
-conf = json.load(openjson)
-cookie = "cookiesearcher.txt"
+cookie = "rblx cookie here"
 
 snipedIds = []
 creatorID = None # put id of creator here
